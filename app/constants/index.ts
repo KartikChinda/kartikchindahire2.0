@@ -1,7 +1,12 @@
 export const textPrimary = [
-    "I envision.",
-    "I design.",
-    "I develop."
+    // "Full stack developer",
+    // "Product engineer",
+    // "UI/UX Designer"
+    "I envision. I design. I develop.",
+    "I adapt. I solve. I deliver.",
+    "I listen. I lead. I build.",
+    // "I design.",
+    // "I develop."
 ]
 
-export const textSecondary = "Building cool sh*t since 2020";
+export const textSecondary = "Building cool sh*t since 2020.";
