@@ -1,3 +1,9 @@
+import Vinyl from "./components/Hero/Vinyl";
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main className=" w-screen h-screen">
+      <Vinyl />
+    </main>
+  );
 }
