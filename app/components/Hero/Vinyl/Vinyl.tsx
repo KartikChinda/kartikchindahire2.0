@@ -74,7 +74,7 @@ const Vinyl = () => {
         start: "top top",
         end: "bottom top",
         scrub: 2,
-        markers: true,
+        // markers: true,
       },
     });
     gsap.to(blackBarRef.current, {
@@ -88,7 +88,7 @@ const Vinyl = () => {
         start: "top -10%",
         end: "bottom top",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
   }, []);
