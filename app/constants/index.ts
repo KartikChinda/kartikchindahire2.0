@@ -4,7 +4,7 @@ export const textPrimary = [
     // "UI/UX Designer"
     "I envision. I design. I develop.",
     "I adapt. I solve. I deliver.",
-    "I listen. I lead. I build.",
+    "I ideate. I iterate. I impact.",
     // "I design.",
     // "I develop."
 ]

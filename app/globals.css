@@ -8,3 +8,17 @@
 @layer {
 
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e0cf1;
+  border-radius: 20px;
+  border: transparent;
+}
