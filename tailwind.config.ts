@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1550px',
+        'ipad-pro-portrait': { 'raw': '(min-width: 1024px) and (max-width: 1024px) and (orientation: portrait)' },
+      },
       fontFamily : {
         "hero-heading": ["Bebas Neue"],
         "loader-text": ["Fascinate"],

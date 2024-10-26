@@ -6,6 +6,7 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
   const [isLoaded, setisLoaded] = useState(false);
 
   const overlayRef = useRef<HTMLDivElement>(null);
+
   const helpLoaderFunction = () => {
     if (loaderNumber >= 100) {
       setloaderNumber(100);
@@ -24,7 +25,7 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
       setTimeout(() => {
         setisLoaded(true);
         setloading(false);
-      }, 1000);
+      }, 1200);
   }, [loaderNumber]);
 
   useEffect(() => {

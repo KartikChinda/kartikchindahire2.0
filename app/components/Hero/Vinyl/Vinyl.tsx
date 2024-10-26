@@ -6,14 +6,18 @@ import vinyl from "@/public/vinyl.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { textPrimary, textSecondary } from "@/app/constants";
 import profile from "@/public/profile.jpg";
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Vinyl = () => {
   const container = useRef<any>();
+  const zoomingRef = useRef<HTMLImageElement>(null);
+  const blackBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document
@@ -60,11 +64,40 @@ const Vinyl = () => {
     { scope: container }
   );
 
+  useEffect(() => {
+    gsap.to(zoomingRef.current, {
+      scale: 10,
+      duration: 4,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2,
+        markers: true,
+      },
+    });
+    gsap.to(blackBarRef.current, {
+      scale: 5,
+      duration: 10,
+      ease: "linear",
+      delay: 3,
+      clipPath: "circle(100% at 50% 50%)",
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top -10%",
+        end: "bottom top",
+        scrub: 1,
+        markers: true,
+      },
+    });
+  }, []);
+
   return (
     <div
       id="container"
       ref={container}
-      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center overflow-hidden"
+      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +106,8 @@ const Vinyl = () => {
         height="800px"
         id="text-primary"
         fill="#EEEEEE"
-        className="vinyl-svgs absolute top-[20%] overflow-visible"
+        className="vinyl-svgs absolute top-[5%] md:top-[20%] lg:top-[10%] 3xl:top-[15%]
+         ipad-pro-portrait:top-[20%] overflow-visible"
       >
         {/* defs is used to define reusable components */}
         <defs>
@@ -93,7 +127,7 @@ const Vinyl = () => {
                 id={`Text${index}`}
                 xlinkHref="#def-1"
                 startOffset="-25%"
-                className="text-5xl font-hero-heading font-black"
+                className="text-4xl font-hero-heading font-black"
               >
                 {text}
               </textPath>
@@ -108,7 +142,11 @@ const Vinyl = () => {
         height="600px"
         id="text-secondary"
         fill="#EEEEEE"
-        className="absolute top-[20%] overflow-visible"
+        className="absolute 
+        top-[15%] md:top-[35%] lg:top-[10%]
+        3xl:top-[25%]
+         ipad-pro-portrait:top-[30%]
+        overflow-visible"
       >
         {/* defs is used to define reusable components */}
         <defs>
@@ -125,7 +163,15 @@ const Vinyl = () => {
             id="text-secondary"
             xlinkHref="#def-2"
             startOffset="37%"
-            className=" fill-current text-black text-4xl border-2 border-black font-hero-heading font-bold"
+            className="block md:hidden fill-current text-black text-4xl border-2 border-black font-hero-heading font-bold"
+          >
+            Kartik Chinda
+          </textPath>
+          <textPath
+            id="text-secondary"
+            xlinkHref="#def-2"
+            startOffset="37%"
+            className="hidden md:block fill-current text-black text-4xl border-2 border-black font-hero-heading font-bold"
           >
             {textSecondary}
           </textPath>
@@ -134,16 +180,32 @@ const Vinyl = () => {
 
       <div
         id="disk"
-        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[400px] h-[400px] md:w-[550px] md:h-[550px] rounded-full flex justify-center items-center"
+        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[550px] md:h-[550px] rounded-full flex justify-center items-center"
       >
         <Image src={vinyl} alt="vinyl" className=" vinyl-images" />
         <div id="coverImg">
           <Image
             src={profile}
+            ref={zoomingRef}
             alt="Kartik"
-            className="vinyl-images absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[200px] h-[200px] md:w-[250px] md:h-[250px] rounded-full overflow-hidden object-cover"
+            className="vinyl-images absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[200px] h-[200px] md:w-[250px] md:h-[250px] rounded-full overflow-hidden object-cover z-10"
           />
         </div>
+      </div>
+      {/* <div
+        ref={blackBarRef}
+        className="absolute inset-0 bg-black h-full w-full " // Black bar that will fade in and out
+      /> */}
+      <div className="">
+        <div
+          ref={blackBarRef}
+          className="absolute bottom-0 left-0 w-full h-full bg-black transform scale-y-0 origin-top overflow-visible"
+          style={{
+            clipPath: "circle(0% at 50% 50%)", // Initial circular clip-path starts as a point
+            transformOrigin: "center", // Ensure scaling happens from the center
+            transform: "scale(0)", // Start hidden
+          }}
+        ></div>
       </div>
     </div>
   );

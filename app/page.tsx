@@ -9,6 +9,8 @@ export default function Home() {
     <main className=" box-border text-black overflow-x-hidden">
       <div>{loading && <Loading setloading={setloading} />}</div>
       <Hero />
+      <div className="h-[100vh]"></div>
+      <div className="h-[100vh]"></div>
     </main>
   );
 }
