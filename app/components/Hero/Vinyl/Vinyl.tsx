@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import vinyl from "@/public/vinyl.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -97,7 +97,7 @@ const Vinyl = () => {
     <div
       id="container"
       ref={container}
-      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center "
+      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -183,6 +183,7 @@ const Vinyl = () => {
         className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[550px] md:h-[550px] rounded-full flex justify-center items-center"
       >
         <Image src={vinyl} alt="vinyl" className=" vinyl-images" />
+
         <div id="coverImg">
           <Image
             src={profile}
@@ -196,10 +197,11 @@ const Vinyl = () => {
         ref={blackBarRef}
         className="absolute inset-0 bg-black h-full w-full " // Black bar that will fade in and out
       /> */}
+
       <div className="">
         <div
           ref={blackBarRef}
-          className="absolute bottom-0 left-0 w-full h-full bg-black transform scale-y-0 origin-top overflow-visible"
+          className="absolute bottom-0 left-0 w-full bg-black transform scale-y-0 origin-top h-[100vh]"
           style={{
             clipPath: "circle(0% at 50% 50%)", // Initial circular clip-path starts as a point
             transformOrigin: "center", // Ensure scaling happens from the center
