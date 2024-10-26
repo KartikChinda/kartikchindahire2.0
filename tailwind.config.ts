@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily : {
         "hero-heading": ["Bebas Neue"],
+        "loader-text": ["Fascinate"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

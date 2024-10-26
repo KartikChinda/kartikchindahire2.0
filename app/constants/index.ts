@@ -9,4 +9,5 @@ export const textPrimary = [
     // "I develop."
 ]
 
-export const textSecondary = "Building cool sh*t since 2020.";
+export const textSecondary = "Hi, I'm Kartik, a software engineer.";
+// export const textSecondary = "Building cool sh*t since 2020.";

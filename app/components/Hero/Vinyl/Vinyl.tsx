@@ -64,7 +64,7 @@ const Vinyl = () => {
     <div
       id="container"
       ref={container}
-      className="bg-backgroundWhite w-[100vw] h-[100vh] relative flex flex-col justify-center items-center overflow-hidden"
+      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center overflow-hidden"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
