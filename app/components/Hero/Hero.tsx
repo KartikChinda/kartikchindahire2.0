@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Vinyl from "./Vinyl/Vinyl";
-import AboutMe from "../AboutMe";
 
 const Hero = () => {
   const [displayVinyl, setDisplayVinyl] = useState(false);
@@ -9,13 +8,9 @@ const Hero = () => {
   }, 1800);
   return (
     <div>
-      {/* <div className="h-[30vh] flex justify-center items-center text-[200px] font-hero-heading">
-        <span>Kartik Chinda</span>
-      </div> */}
-      <div className="flex justify-start items-start h-[150vh] md:h-[180vh] overflow-hidden">
+      <div className="flex justify-start items-start h-[130vh] md:h-[170vh] overflow-hidden bg-[#F4F9FF]">
         {displayVinyl && <Vinyl />}
       </div>
-      {/* <div>{isVisible && <AboutMe />}</div> */}
     </div>
   );
 };

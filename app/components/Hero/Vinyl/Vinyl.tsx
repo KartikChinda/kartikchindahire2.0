@@ -97,7 +97,7 @@ const Vinyl = () => {
     <div
       id="container"
       ref={container}
-      className="bg-white w-[100vw] h-[100vh] relative flex flex-col justify-center items-center"
+      className="bg-[#F4F9FF] w-[100vw] h-[100vh] relative flex flex-col justify-center items-center"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ const Vinyl = () => {
         width="full"
         height="800px"
         id="text-primary"
-        fill="#EEEEEE"
+        fill="#F4F9FF"
         className="vinyl-svgs absolute top-[5%] md:top-[20%] lg:top-[10%] 3xl:top-[15%]
          ipad-pro-portrait:top-[20%] overflow-visible"
       >
@@ -141,7 +141,7 @@ const Vinyl = () => {
         width="600px"
         height="600px"
         id="text-secondary"
-        fill="#EEEEEE"
+        fill="#F4F9FF"
         className="absolute 
         top-[15%] md:top-[35%] lg:top-[10%]
         3xl:top-[25%]
@@ -193,10 +193,6 @@ const Vinyl = () => {
           />
         </div>
       </div>
-      {/* <div
-        ref={blackBarRef}
-        className="absolute inset-0 bg-black h-full w-full " // Black bar that will fade in and out
-      /> */}
 
       <div className="">
         <div
