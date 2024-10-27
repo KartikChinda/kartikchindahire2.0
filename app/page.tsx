@@ -19,7 +19,7 @@ export default function Home() {
       <div>{loading && <Loading setloading={setloading} />}</div>
       <Hero />
       <AboutMe />
-      {/* <div className="h-[100vh]"></div> */}
+      <div className="h-screen"></div>
     </main>
   );
 }

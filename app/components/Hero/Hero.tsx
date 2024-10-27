@@ -6,7 +6,7 @@ const Hero = () => {
   const [displayVinyl, setDisplayVinyl] = useState(false);
   setTimeout(() => {
     setDisplayVinyl(true);
-  }, 2500);
+  }, 1800);
   return (
     <div>
       {/* <div className="h-[30vh] flex justify-center items-center text-[200px] font-hero-heading">

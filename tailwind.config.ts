@@ -15,6 +15,9 @@ const config: Config = {
       fontFamily : {
         "hero-heading": ["Bebas Neue"],
         "loader-text": ["Fascinate"],
+        "subtext-heebo": ["Heebo"],
+        "subtext-lora": ['Lora'],
+        "heading-playfair": ['Playfair Display']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

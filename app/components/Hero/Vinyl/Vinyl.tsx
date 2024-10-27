@@ -163,7 +163,7 @@ const Vinyl = () => {
             id="text-secondary"
             xlinkHref="#def-2"
             startOffset="37%"
-            className="block md:hidden fill-current text-black text-4xl border-2 border-black font-hero-heading font-bold"
+            className="block md:hidden fill-current text-black text-4xl border-2 border-black font-subtext-heebo font-thin tracking-tight"
           >
             Kartik Chinda
           </textPath>
@@ -171,7 +171,7 @@ const Vinyl = () => {
             id="text-secondary"
             xlinkHref="#def-2"
             startOffset="37%"
-            className="hidden md:block fill-current text-black text-4xl border-2 border-black font-hero-heading font-bold"
+            className="hidden md:block fill-current text-black text-4xl border-2 border-black font-subtext-heebo font-thin tracking-tight"
           >
             {textSecondary}
           </textPath>
