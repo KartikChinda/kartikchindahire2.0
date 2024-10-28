@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero/Hero";
 import Loading from "./components/Loading";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/About";
 import WorkEx from "./components/WorkEx";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -22,7 +23,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <WorkEx />
-      {/* <div className="h-screen"></div> */}
+      <Contact />
     </main>
   );
 }
