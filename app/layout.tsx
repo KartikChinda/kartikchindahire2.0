@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SmoothScrolling from "./libs/SmoothScrolling";
 
 export const metadata: Metadata = {
   title: "Kartik Chinda",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white">{children}</body>
+      <body className="bg-white">
+        <SmoothScrolling>{children}</SmoothScrolling>
+      </body>
     </html>
   );
 }
