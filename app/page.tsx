@@ -5,6 +5,8 @@ import Loading from "./components/Loading";
 import AboutMe from "./components/About";
 import WorkEx from "./components/WorkEx";
 import Contact from "./components/Contact/Contact";
+import { TestimonialsToContact } from "./components/Gradients";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -23,6 +25,8 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <WorkEx />
+      <Testimonials />
+      <TestimonialsToContact />
       <Contact />
     </main>
   );

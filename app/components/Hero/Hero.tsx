@@ -8,7 +8,7 @@ const Hero = () => {
   }, 1800);
   return (
     <div>
-      <div className="flex justify-start items-start h-[130vh] md:h-[170vh] overflow-hidden bg-[#F4F9FF]">
+      <div className="flex justify-start items-start h-[130vh] md:h-[150vh] overflow-hidden bg-[#F4F9FF]">
         {displayVinyl && <Vinyl />}
       </div>
     </div>

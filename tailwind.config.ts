@@ -26,6 +26,7 @@ const config: Config = {
       },
       colors: {
         backgroundWhite: "#EEEEEE",
+        backgroundPeach: "#FFF8F0",
       }
     },
   },
