@@ -7,7 +7,8 @@ const Contact = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const simulation = new WebGLFluidEnhanced(containerRef.current!);
+    if (!containerRef.current) return;
+    const simulation = new WebGLFluidEnhanced(containerRef.current);
     simulation.setConfig({
       densityDissipation: 0.5,
       velocityDissipation: 0.4,
