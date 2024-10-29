@@ -10,29 +10,26 @@ const WorkEx = () => {
   const ballRef = useRef(null);
 
   useEffect(() => {
-    // Select each ball by its class and apply a scroll-triggered reveal
-    // const balls = [".ball01", ".ball02", ".ball03", ".ball04"];
+    const balls = [".card1", ".card2", ".card3", ".card4"];
 
-    // balls.forEach((ball, index) => {
-    //   gsap.fromTo(
-    //     ball,
-    //     { autoAlpha: 0, scale: 0.5 }, // Start invisible
-    //     {
-    //       autoAlpha: 1,
-    //       scale: 1,
-    //       duration: 0.005,
-    //       ease: "elastic(2.5, 1)",
-    //       scrollTrigger: {
-    //         trigger: svgRef.current,
-    //         scrub: true,
-    //         start: `${Math.pow(index, 2) * 100}vh top`, // Trigger at the top of each 100vh section
-    //         end: `${Math.pow(index + 0.5, 2) * 100}vh top`,
-    //         // markers: true,
-    //         // end: `${(index + 1) * 100}vh center`, // Remain visible for the next 100vh
-    //       },
-    //     }
-    //   );
-    // });
+    balls.forEach((ball, index) => {
+      gsap.fromTo(
+        ball,
+        { autoAlpha: 0, scale: 0.5 }, // Start invisible
+        {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.005,
+          ease: "elastic(2.5, 1)",
+          scrollTrigger: {
+            trigger: svgRef.current,
+            scrub: true,
+            start: `${Math.pow(index, 2) * 100}vh top`,
+            end: `${Math.pow(index + 1, 2) * 100}vh top`,
+          },
+        }
+      );
+    });
 
     gsap.to(ballRef.current, {
       motionPath: {
@@ -95,7 +92,7 @@ const WorkEx = () => {
             }}
           ></div>
           <div
-            className="absolute border-2 rounded-xl 
+            className="card1 absolute border-2 rounded-xl 
             
             top-[5%] 
             w-[300px] h-[200px]
@@ -107,7 +104,7 @@ const WorkEx = () => {
             Hello
           </div>
           <div
-            className="absolute border-2 rounded-xl top-[28%]  md:w-[400px] md:h-[280px]
+            className="card2 absolute border-2 rounded-xl top-[28%]  md:w-[400px] md:h-[280px]
           xl:w-[650px] xl:h-[400px]
            w-[300px] h-[200px]
            left-[20%]
@@ -116,7 +113,7 @@ const WorkEx = () => {
             Hello
           </div>
           <div
-            className="absolute border-2 rounded-xl top-[51%]  md:w-[400px] md:h-[280px]
+            className="card3 absolute border-2 rounded-xl top-[51%]  md:w-[400px] md:h-[280px]
           xl:w-[650px] xl:h-[400px]
            w-[300px] h-[200px]
 left-[10%]
@@ -125,7 +122,7 @@ left-[10%]
             Hello
           </div>
           <div
-            className="absolute border-2 rounded-xl top-[75%] md:w-[400px] md:h-[280px]
+            className="card4 absolute border-2 rounded-xl top-[75%] md:w-[400px] md:h-[280px]
              w-[300px] h-[200px]
 left-[20%]
           xl:w-[650px] xl:h-[400px]  md:left-[35%] flex justify-center items-center"

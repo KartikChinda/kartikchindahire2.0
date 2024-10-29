@@ -5,8 +5,8 @@ import Loading from "./components/Loading";
 import AboutMe from "./components/About";
 import WorkEx from "./components/WorkEx";
 import Contact from "./components/Contact/Contact";
-import { TestimonialsToContact } from "./components/Gradients";
 import Testimonials from "./components/Testimonials";
+import Gradient from "./components/Gradients";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -25,8 +25,9 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <WorkEx />
+      <Gradient colorFrom="#000" colorTo="#FFF8F0" fromPercentage="50%" />
       <Testimonials />
-      <TestimonialsToContact />
+      <Gradient colorFrom="#FFF8F0" colorTo="#fff" />
       <Contact />
     </main>
   );
