@@ -8,51 +8,6 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 const WorkEx = () => {
   const svgRef = useRef(null);
 
-  // useEffect(() => {
-  //   const pulses = gsap
-  //     .timeline({
-  //       defaults: {
-  //         duration: 0.05,
-  //         autoAlpha: 1,
-  //         scale: 2,
-  //         transformOrigin: "center",
-  //         ease: "elastic(2.5, 1)",
-  //       },
-  //     })
-  //     .to(".ball02, .text01", {}, 0.2)
-  //     .to(".ball03, .text02", {}, 0.33)
-  //     .to(".ball04, .text03", {}, 0.46);
-
-  //   const main = gsap
-  //     .timeline({
-  //       defaults: { duration: 1 },
-  //       scrollTrigger: {
-  //         trigger: svgRef.current,
-  //         scrub: true,
-  //         start: "top center",
-  //         end: "bottom center",
-  //       },
-  //     })
-  //     .to(".ball01", { duration: 0.01, autoAlpha: 1 })
-  //     .from(".theLine", { drawSVG: 0 }, 0)
-  //     .to(
-  //       ".ball01",
-  //       {
-  //         motionPath: {
-  //           path: ".theLine",
-  //           align: ".theLine",
-  //           alignOrigin: [0.5, 0.5],
-  //         },
-  //       },
-  //       0
-  //     )
-  //     .add(pulses, 0);
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
   useEffect(() => {
     // Select each ball by its class and apply a scroll-triggered reveal
     const balls = [".ball01", ".ball02", ".ball03", ".ball04"];
@@ -64,20 +19,23 @@ const WorkEx = () => {
         {
           autoAlpha: 1,
           scale: 1,
-          duration: 0.05,
+          duration: 0.005,
           ease: "elastic(2.5, 1)",
           scrollTrigger: {
             trigger: svgRef.current,
             scrub: true,
             start: `${Math.pow(index, 2) * 100}vh top`, // Trigger at the top of each 100vh section
-            end: `${Math.pow(index + 1, 2) * 100}vh top`,
+            end: `${Math.pow(index + 0.5, 2) * 100}vh top`,
             // markers: true,
-            toggleActions: "play none none reverse",
             // end: `${(index + 1) * 100}vh center`, // Remain visible for the next 100vh
           },
         }
       );
     });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
@@ -111,7 +69,7 @@ const WorkEx = () => {
             id="svg-stage"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 600 1200"
-            className="w-full mx-auto overflow-visible"
+            className="w-full  mx-auto overflow-visible"
             ref={svgRef}
           >
             {/* <path
@@ -128,14 +86,14 @@ const WorkEx = () => {
             <circle
               className="ball ball01 fill-white invisible"
               r="20"
-              cx="50"
-              cy="800" // 80% of the screen height from the path
+              cx="190"
+              cy="900" // 80% of the screen height from the path
             />
             <circle
               className="ball ball02 fill-white invisible"
               r="20"
-              cx="278"
-              cy="201"
+              cx="230"
+              cy="150"
             />
             <circle
               className="ball ball03 fill-white invisible"
