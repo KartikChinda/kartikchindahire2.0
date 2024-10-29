@@ -26,6 +26,9 @@ const AboutMe = () => {
         },
       }
     );
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (

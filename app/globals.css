@@ -12,10 +12,10 @@
 @layer {
 
 }
-
+/* 
 body {
   scroll-behavior: smooth;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 6px;

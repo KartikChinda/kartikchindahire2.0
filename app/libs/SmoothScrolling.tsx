@@ -8,7 +8,8 @@ const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
       root
       options={{
         lerp: 0.03,
-        duration: 1,
+        duration: 5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true,
       }}
     >
