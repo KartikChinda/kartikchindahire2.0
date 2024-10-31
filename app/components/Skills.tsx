@@ -1,5 +1,7 @@
 import Gradient from "@/app/components/Gradients/index";
 import React from "react";
+import { skills } from "../constants";
+import { p } from "framer-motion/client";
 
 const Skills = () => {
   return (
@@ -15,19 +17,21 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 w-full gap-2 justify-center items-center">
-          <div className="w-[150px] md:w-[350px] 3xl:w-[400px] border-2 min-h-20 flex justify-center items-center">
-            Hello
-          </div>
-          <div className="w-[150px] md:w-[350px] 3xl:w-[400px] border-2 min-h-20 flex justify-center items-center">
-            Hello
-          </div>
-          <div className="w-[150px] md:w-[350px] 3xl:w-[400px] border-2 min-h-20 flex justify-center items-center">
-            Hello
-          </div>
-          <div className="w-[150px] md:w-[350px] 3xl:w-[400px] border-2 min-h-20 flex justify-center items-center">
-            Hello
-          </div>
+        <div className="mt-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 md:gap-2 justify-center items-center">
+          {skills.map((skill) => {
+            return (
+              <div className="w-[300px] md:w-[300px] 3xl:w-[400px] border-2 h-[300px] flex flex-col justify-start items-center">
+                <div className="pt-4 text-3xl font-subtext-heebo font-semibold">
+                  {skill.heading}
+                </div>
+                <div className="mt-4 font-subtext-heebo flex justify-start items-start flex-col w-[50%] text-xl italic font-extralight">
+                  {skill.skills.map((currSkill) => {
+                    return <p>{currSkill}</p>;
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

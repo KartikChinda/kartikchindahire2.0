@@ -6,7 +6,7 @@ const skills = [
     },
     {
         id: 2,
-        heading: "Interface",
+        heading: "Interfaces",
         skills: ["React.js", "Next.js", "Tailwind CSS", "GSAP", "Storybook", "Atomic Web Design"]
     },
     {
