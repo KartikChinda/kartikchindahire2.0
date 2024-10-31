@@ -12,7 +12,7 @@ const Testimonials = () => {
             Narcissism begets humility, so
           </p>
           <p className="text-5xl md:text-7xl mt-2 font-semibold tracking-wide text-black font-hero-heading">
-            Here's what others have to say
+            Here's what others have to say.
           </p>
         </div>
         <div className=" mt-10 md:mt-0">

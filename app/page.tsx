@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import Hero from "./components/Hero/Hero";
 import Loading from "./components/Loading";
 import AboutMe from "./components/About";
-import WorkEx from "./components/WorkEx";
+import WorkEx from "./components/WorkEx/WorkEx";
 import Contact from "./components/Contact/Contact";
 import Testimonials from "./components/Testimonials";
 import Gradient from "./components/Gradients";
+import Skills from "./components/Skills";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -25,9 +26,21 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <WorkEx />
-      <Gradient colorFrom="#000" colorTo="#FFF8F0" fromPercentage="50%" />
+      {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
+      {/* <Gradient
+        colorArray={[
+          "#000000",
+          "#2A2726",
+          "#524F4D",
+          "#7A7573",
+          "#A19C9A",
+          "#FFF8F0",
+        ]}
+      /> */}
+      <Skills />
       <Testimonials />
-      <Gradient colorFrom="#FFF8F0" colorTo="#fff" />
+      <Gradient colorArray={["#FFF8F0", "#fff"]} />
+      {/* Canvas in there most probably isnt configured for touch, might have to see what's happening */}
       <Contact />
     </main>
   );

@@ -4,29 +4,30 @@ import WebGLFluidEnhanced from "webgl-fluid-enhanced";
 import Socials from "./Socials";
 
 const Contact = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-    const simulation = new WebGLFluidEnhanced(containerRef.current);
-    simulation.setConfig({
-      densityDissipation: 0.5,
-      velocityDissipation: 0.4,
-      pressure: 0.5,
-      curl: 4,
-      colorPalette: ["#5D0E85", "#45056E", "#2D004E"],
-      bloom: false,
-      colorful: false,
-    });
-    simulation.start();
+    if (containerRef.current) {
+      const simulation = new WebGLFluidEnhanced(containerRef.current);
+      simulation.setConfig({
+        densityDissipation: 0.5,
+        velocityDissipation: 0.4,
+        pressure: 0.5,
+        curl: 4,
+        colorPalette: ["#5D0E85", "#45056E", "#2D004E"],
+        bloom: false,
+        colorful: false,
+      });
+      simulation.start();
 
-    return () => {
-      simulation.stop();
-    };
+      return () => {
+        simulation.stop();
+      };
+    }
   }, []);
 
   return (
-    <section className="w-screen h-screen flex justify-center items-center flex-col">
+    <section className="w-screen  h-[50vh] md:h-screen flex justify-center items-center flex-col">
       <div
         ref={containerRef}
         className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white"

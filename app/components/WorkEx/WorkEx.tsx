@@ -19,7 +19,7 @@ const WorkEx = () => {
         {
           autoAlpha: 1,
           scale: 1,
-          duration: 0.005,
+          duration: 3 + Math.pow(index, 2),
           ease: "elastic(2.5, 1)",
           scrollTrigger: {
             trigger: svgRef.current,
@@ -54,9 +54,9 @@ const WorkEx = () => {
 
   return (
     <section className=" pt-20 bg-black ">
-      <div className="w-full bg-black text-white  flex flex-col items-center">
-        <div className="w-[90%] flex flex-col justify-end items-end  -mb-28">
-          <p className="text-base md:text-xl mb-1 mt-5 font-extralight font-subtext-heebo text-white ">
+      <div className="w-full bg-black text-white  flex flex-col items-center ">
+        <div className="w-[90%] flex flex-col justify-end items-end xl:pr-8  -mb-28">
+          <p className="text-base md:text-xl mb-1 mt-5 mr-2 font-extralight font-subtext-heebo text-white ">
             A glimpse into my professional journey
           </p>
           <p className="text-5xl md:text-8xl mt-2 font-bold tracking-wide text-right text-[#F4F9FF] font-hero-heading">
