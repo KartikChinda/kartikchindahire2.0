@@ -40,7 +40,7 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black flex items-center justify-center z-50 text-white text-[100px] xl:text-[250px] font-black italic font-hero-heading overflow-hidden"
+      className="fixed inset-0 bg-black flex items-center justify-center z-50 text-white text-[100px] xl:text-[250px] font-black italic font-hero-heading"
       ref={overlayRef}
       style={{ clipPath: "circle(100%)" }}
     >

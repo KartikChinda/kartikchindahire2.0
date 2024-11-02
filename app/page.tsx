@@ -27,17 +27,7 @@ export default function Home() {
       <AboutMe />
       <WorkEx />
       {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
-      {/* <Gradient
-        colorArray={[
-          "#000000",
-          "#2A2726",
-          "#524F4D",
-          "#7A7573",
-          "#A19C9A",
-          "#FFF8F0",
-        ]}
-      /> */}
-      <Skills />
+      {/* <Skills /> */}
       <Testimonials />
       <Gradient colorArray={["#FFF8F0", "#fff"]} />
       {/* Canvas in there most probably isnt configured for touch, might have to see what's happening */}

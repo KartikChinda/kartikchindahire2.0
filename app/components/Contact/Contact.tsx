@@ -27,7 +27,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="w-screen  h-[50vh] md:h-screen flex justify-center items-center flex-col">
+    <section className="w-screen h-screen flex justify-center items-center flex-col">
       <div
         ref={containerRef}
         className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white"
