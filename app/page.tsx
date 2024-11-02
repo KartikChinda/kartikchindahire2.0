@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Testimonials from "./components/Testimonials";
 import Gradient from "./components/Gradients";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects/Projects";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -25,9 +26,11 @@ export default function Home() {
       <div>{loading && <Loading setloading={setloading} />}</div>
       <Hero />
       <AboutMe />
-      <WorkEx />
+      {/* <WorkEx /> */}
+      <Projects />
       {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
       {/* <Skills /> */}
+      <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} />
       <Testimonials />
       <Gradient colorArray={["#FFF8F0", "#fff"]} />
       {/* Canvas in there most probably isnt configured for touch, might have to see what's happening */}
