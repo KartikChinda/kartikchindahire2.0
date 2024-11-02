@@ -26,7 +26,7 @@ export default function Home() {
       <div>{loading && <Loading setloading={setloading} />}</div>
       <Hero />
       <AboutMe />
-      {/* <WorkEx /> */}
+      <WorkEx />
       <Projects />
       {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
       {/* <Skills /> */}
