@@ -42,7 +42,7 @@ const AboutMe = () => {
           <p className="text-xl mb-1 mt-5 font-extralight font-subtext-heebo text-white ">
             Get to know the next addition to your team
           </p>
-          <p className="text-8xl mt-2 font-bold tracking-wide text-[#F4F9FF] font-hero-heading">
+          <p className="text-6xl md:text-8xl mt-2 font-bold tracking-wide text-[#F4F9FF] font-hero-heading">
             About me.
           </p>
         </div>

@@ -29,7 +29,7 @@ export default function Home() {
       <WorkEx />
       <Projects />
       {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
-      {/* <Skills /> */}
+      <Skills />
       <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} />
       <Testimonials />
       <Gradient colorArray={["#FFF8F0", "#fff"]} />

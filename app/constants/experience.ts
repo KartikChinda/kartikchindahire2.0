@@ -1,4 +1,4 @@
-import dera from "@/public/dera.png";
+import dera from "../../public/dera.png"
 import wloo from "@/public/wloo.webp";
 import dps from "@/public/dps.png";
 import drdo from "@/public/drdo.png";
@@ -11,7 +11,10 @@ const experiences = [
         iconBg: "#000",
         date: "May 2024 - Present",
         points: [
-            "Working with Wagmi,RainbowKit, Next,js and Typescript to integrate smart contracts with the frontend, along with also managing the MVP repository and it's deployments on AWS. Also integrating CMS's like Ghost with the frontend.",
+            "Integrated smart contracts with the frontend using Wagmi, RainbowKit, Next.js, and TypeScript to enhance seamless Web3 interactions.",
+            "Improved Lighthouse performance metrics from 52 to 95, achieving an impressive 82% increase in overall site performance.",
+            "Managed and deployed the CI/CD pipelines on Amplify for the project monorepo for a scalable and robust cloud infrastructure.",
+            "Led MVP repository management, conducting extensive code reviews and refactoring to boost code quality, while implementing atomic design principles and utilizing Storybook."
         ],
     },
     {
@@ -21,8 +24,8 @@ const experiences = [
         iconBg: "#383E56",
         date: "June 2023 - August 2023",
         points: [
-            "Worked on a project focused on mitigating spoilers in social media platforms. This experience enhanced my understanding of user-centered research methodologies, survey design and data analysis.",
-            "Developed proficiency with Figma for UI and IxD, and advanced my interaction design skills. This experience fueled my growth in frontend development and user experience optimization, including expertise in qualitative and quantitative research, prototyping, and user feedback analysis.",
+            "Led a project aimed at mitigating spoilers on social media platforms, strengthening my expertise in user-centered design, survey creation, and data-driven analysis to improve user engagement and experience.",
+            "Gained expertise in Figma for UI/UX design and interaction design. This fueled my growth in frontend development, optimizing user experience with strong skills in qualitative and quantitative research, prototyping, and user testing.",
         ],
     },
     {
@@ -32,9 +35,9 @@ const experiences = [
         iconBg: "#E6DEDD",
         date: "May 2022 - August 2022",
         points: [
-            "Created a platform for the employees of German Ministries to ease their communication processes and ease their networking.",
-            'Worked in a team full of Product Managers, Designers and AI engineers with a lot of interesting technologies in an Agile Methodology like ReactJs, Redux, NodeJs, Material-UI, ExpressJS, PostgressSQL, Github Workflow.',
-            "Also conducted user interviews and did a plethora of user research.",
+            "Built a communication and networking platform for German Ministry employees, improving internal collaboration.",
+            "Worked in a cross-functional Agile team with Product Managers, Designers, and AI Engineers, utilizing technologies like React.js, CSS, Postman, Redux, Node.js, Express.js, PERN stack, and GitHub Workflows.",
+            "Managed tasks through Jira to ensure efficient sprint planning and deployment and conducted user interviews and extensive user research.",
         ],
     },
     {
@@ -44,8 +47,9 @@ const experiences = [
         iconBg: "#383E56",
         date: "June 2021 - December 2021",
         points: [
-            "Worked on a lot of interesting domains like Quantum Computing, Internet of Behavior, Cryptography, Sentiment Analysis etc.",
-            "Sent weekly reports on the different algorithms implemented (mostly in Python) and findings from different research articles read from the technological areas allocated and formed ideas on how they could be used for strengthening the nation's security.",
+            "Conducted in-depthresearch on advanced topics like Quantum Computing, Internet of Behavior, Cryptography, and Sentiment Analysis.",
+            "Delivered weekly reports on algorithms implemented, primarily in Python, and synthesized insights from research articles.",
+            "Proposed innovative applications for these technologies to enhance national security."
         ],
     },
 

@@ -30,7 +30,7 @@ const Contact = () => {
     <section className="w-screen h-screen flex justify-center items-center flex-col">
       <div
         ref={containerRef}
-        className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white"
+        className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white "
       >
         <div className="absolute text-base font-semibold z-10 mb-28 text-gray-300 font-subtext-heebo">
           Have an idea?
@@ -41,9 +41,9 @@ const Contact = () => {
             "https://mail.google.com/mail/?view=cm&fs=1&to=kartik.chinda@gmail.com"
           }
           target="_blank"
-          className="absolute font-black font-hero-heading  text-7xl text-white"
+          className="absolute font-black font-hero-heading  text-7xl text-white tracking-wide"
         >
-          contact me
+          let's make it together.
         </Link>
         <div className="absolute  font-semibold z-10 bottom-10  font-subtext-heebo">
           <Socials />

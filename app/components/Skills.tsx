@@ -38,8 +38,8 @@ const Skills = () => {
 
   return (
     <>
-      <Gradient colorArray={["#F1EFF4", "#FFF8F0"]} />
-      <section ref={toStartRef} className=" bg-backgroundPeach p-8 h-[500vh]">
+      <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} />
+      <section ref={toStartRef} className=" bg-backgroundPeach p-8">
         <div className="flex flex-col justify-start items-start w-full gap-2">
           <p className="text-2xl  mt-5 font-extralight font-subtext-heebo text-black ">
             Jack of all trades,
