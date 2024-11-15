@@ -30,9 +30,9 @@ const Contact = () => {
     <section className="w-screen h-screen flex justify-center items-center flex-col">
       <div
         ref={containerRef}
-        className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white "
+        className="w-[90%] h-[90%]  opacity-100 relative flex flex-col justify-center items-center z-10 text-white"
       >
-        <div className="absolute text-base font-semibold z-10 mb-28 text-gray-300 font-subtext-heebo">
+        {/* <div className="absolute text-base font-semibold z-10 mb-28 text-gray-300 font-subtext-heebo ">
           Have an idea?
         </div>
 
@@ -41,13 +41,13 @@ const Contact = () => {
             "https://mail.google.com/mail/?view=cm&fs=1&to=kartik.chinda@gmail.com"
           }
           target="_blank"
-          className="absolute font-black font-hero-heading  text-7xl text-white tracking-wide"
+          className="absolute font-black font-hero-heading text-5xl text-center mt-2 md:mt-0 md:text-7xl text-white tracking-wide"
         >
           let's build it together.
         </Link>
-        <div className="absolute  font-semibold z-10 bottom-10  font-subtext-heebo">
+        <div className="absolute font-semibold z-10 bottom-10  font-subtext-heebo">
           <Socials />
-        </div>
+        </div> */}
       </div>
     </section>
   );

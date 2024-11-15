@@ -49,7 +49,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="py-20 p-[32px] columns-[400px] bg-gradient-to-b from-black to-lightPeachbg">
+    <div className="py-20 p-[32px] columns-[300px] lg:columns-[400px] bg-gradient-to-b from-black to-lightPeachbg">
       {images.map((imageSrc, index) => (
         <Image
           onLoadingComplete={(el) => {
