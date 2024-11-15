@@ -26,7 +26,7 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
         setisLoaded(true);
         setloading(false);
       }, 1200);
-  }, [loaderNumber]);
+  }, [loaderNumber, setloading]);
 
   useEffect(() => {
     setTimeout(() => {

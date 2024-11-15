@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import Gradient from "./components/Gradients";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects/Projects";
+import Gallery from "./components/Gallery";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
@@ -19,14 +20,15 @@ export default function Home() {
     }
   }, [loading]);
 
-  // THIS WILL BE MADE LIKE THE JOURNEY OF THAT CIRCLE, EVERYTHING HAS A CIRCLE, FROM THE TUNNEL TO THE TIMELINE. BUT DO THIS IN A YEAR OR SO, WHEN YOU HAVE MORE SKILLS AND MORE TIME ON YOUR HAND.
-
   return (
     <main className=" box-border text-black overflow-x-hidden">
       <div>{loading && <Loading setloading={setloading} />}</div>
       <Hero />
       <AboutMe />
       <WorkEx />
+      <div className="hidden md:block">
+        <Gallery />
+      </div>
       <Projects />
       {/* STOP LENIS ON PHONE, AND FIX THE LOADING AND THE WEBGL DOESNT WORK FOR MOBILE. FIX THAT TOO. And responsiveness for the workex on phone */}
       {/* <Skills /> */}
