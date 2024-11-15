@@ -43,7 +43,7 @@ const Contact = () => {
           target="_blank"
           className="absolute font-black font-hero-heading  text-7xl text-white tracking-wide"
         >
-          let's make it together.
+          let's build it together.
         </Link>
         <div className="absolute  font-semibold z-10 bottom-10  font-subtext-heebo">
           <Socials />

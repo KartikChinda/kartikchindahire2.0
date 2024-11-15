@@ -25,7 +25,7 @@ const Testimonials = () => {
             return (
               <div
                 key={testimonial.id}
-                className="p-4 text-black w-[400px] md:w-[350px] lg:w-[700px] "
+                className="p-4 text-black w-[400px] md:w-[350px] xl:w-[400px] "
               >
                 <p className="px-5 mt-3 text-base font-subtext text-black font-subtext-heebo">
                   "{testimonial.testimonial}"
