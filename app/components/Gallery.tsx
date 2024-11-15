@@ -61,7 +61,7 @@ const Gallery = () => {
           }}
           src={imageSrc}
           alt={`Image ${index + 1}`}
-          className="w-[100%] mb-[1rem] border-2 border-black rounded-xl"
+          className="w-[100%] mb-[1rem] border-2 shadow-2xl border-black rounded-xl"
           style={{ transformStyle: "preserve-3d" }}
         />
       ))}
