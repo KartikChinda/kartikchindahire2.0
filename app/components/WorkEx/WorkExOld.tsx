@@ -4,7 +4,7 @@ import { ScrollTrigger, MotionPathPlugin } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-const WorkEx = () => {
+const WorkExOld = () => {
   const svgRef = useRef(null);
   const ballRef = useRef(null);
 
@@ -112,7 +112,7 @@ const WorkEx = () => {
             Hello
           </div>
           <div
-            className="card3 absolute border-2 rounded-xl top-[51%]  md:w-[400px] md:h-[280px]
+            className="card3 absolute border-2 rounded-xl top-[51%]   md:w-[400px] md:h-[280px]
           xl:w-[650px] xl:h-[400px]
            w-[300px] h-[200px]
 left-[10%]
@@ -134,4 +134,4 @@ left-[20%]
   );
 };
 
-export default WorkEx;
+export default WorkExOld;

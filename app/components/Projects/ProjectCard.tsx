@@ -23,7 +23,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="w-full 3xl:w-[70%]">
+    <div className="w-full 3xl:w-[75%]">
       <div className="w-full flex justify-between items-center px-4">
         <p className=" font-subtext-heebo font-extralight text-base italic">
           Project 0{project.id}
