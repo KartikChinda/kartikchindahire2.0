@@ -31,7 +31,7 @@ export default function WorkExNew() {
 
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      threshold: 0.1,
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(
@@ -60,7 +60,7 @@ export default function WorkExNew() {
       ></div>
       {experiences.map((exp, index) => (
         <div
-          className="h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center"
+          className="h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center mb-8 md:mb-0 rounded-xl"
           ref={(el) => {
             observerRef.current[index] = el;
           }}
