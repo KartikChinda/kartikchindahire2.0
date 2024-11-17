@@ -39,8 +39,8 @@ const Skills = () => {
                   {skill.heading}
                 </div>
                 <div className="mt-4 font-subtext-heebo flex justify-start items-start flex-col w-[50%] text-xl italic font-extralight">
-                  {skill.skills.map((currSkill) => {
-                    return <p>{currSkill}</p>;
+                  {skill.skills.map((currSkill, index) => {
+                    return <p id={`${index}`}>{currSkill}</p>;
                   })}
                 </div>
                 {/* <Image

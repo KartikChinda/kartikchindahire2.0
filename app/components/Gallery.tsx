@@ -38,7 +38,11 @@ const Gallery = () => {
     }
   }, [isLoaded]);
 
-  const handleImageLoad = (el: HTMLImageElement | null, index: number) => {
+  const handleImageLoad = (
+    event: React.SyntheticEvent<HTMLImageElement>,
+    index: number
+  ) => {
+    const el = event.currentTarget;
     if (el) {
       imageRefs.current[index] = el;
     }
@@ -52,13 +56,15 @@ const Gallery = () => {
     <div className="py-20 p-[32px] columns-[300px] lg:columns-[400px] bg-gradient-to-b from-black to-lightPeachbg">
       {images.map((imageSrc, index) => (
         <Image
-          onLoadingComplete={(el) => {
-            handleImageLoad(el, index);
+          id={`${index}`}
+          onLoad={(event) => {
+            handleImageLoad(event, index);
             // loading complete if it is the last image
             if (index === images.length - 1) {
               handleAllImagesLoaded();
             }
           }}
+          priority
           src={imageSrc}
           alt={`Image ${index + 1}`}
           className="w-[100%] mb-[1rem] border-2 shadow-2xl border-black rounded-xl"

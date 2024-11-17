@@ -58,7 +58,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="flex justify-start items-start gap-2 mt-8 mb-4 relative">
             {project.skills.map((skill) => {
               return (
-                <div>
+                <div id={skill.name}>
                   <Link href={skill.link}>
                     <Image
                       src={skill.imageURL}

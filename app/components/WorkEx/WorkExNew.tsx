@@ -3,7 +3,7 @@ import { experiences } from "@/app/constants";
 import ExperienceCard from "./ExperienceCard";
 
 export default function WorkExNew() {
-  const [shadowColor, setshadowColor] = useState("#624E88");
+  const [shadowColor, setshadowColor] = useState("black");
   const colorsArray = ["#A594F9", "#E8F994", "#94F9D8", "#F994B5"];
   const observerRef = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -60,6 +60,7 @@ export default function WorkExNew() {
       ></div>
       {experiences.map((exp, index) => (
         <div
+          id={`${index}`}
           className="lg:h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center  md:mb-0 rounded-xl"
           ref={(el) => {
             observerRef.current[index] = el;
