@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Vinyl from "./Vinyl/Vinyl";
 
 const Hero = () => {
-  const [displayVinyl, setDisplayVinyl] = useState(false);
-  setTimeout(() => {
-    setDisplayVinyl(true);
-  }, 1800);
+  const [displayVinyl, setDisplayVinyl] = useState(true);
+  // setTimeout(() => {
+  //   setDisplayVinyl(true);
+  // }, 1800);
   return (
     <div>
       <div className="flex justify-start items-start h-[130vh] md:h-[150vh] overflow-hidden bg-[#F4F9FF]">

@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className=" box-border text-black ">
-      <div>{loading && <Loading setloading={setloading} />}</div>
+      {/* <div>{loading && <Loading setloading={setloading} />}</div> */}
       <Hero />
       <AboutMe />
       <WorkExIntro />
