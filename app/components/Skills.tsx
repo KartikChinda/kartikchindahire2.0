@@ -10,31 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   const toStartRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    const cards = [".card-1", ".card-2", ".card-3", ".card-4"];
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { y: 0 },
-        {
-          y: (1 - (index + 1) * 0.1) * 100,
-          ease: "linear",
-          scrollTrigger: {
-            start: "top bottom", // Start when the top of the cards hits the bottom of the viewport
-            end: "bottom top",
-            trigger: toStartRef.current,
-            invalidateOnRefresh: true,
-            markers: true,
-            scrub: 0,
-          },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   return (
     <>
@@ -58,7 +33,7 @@ const Skills = () => {
             return (
               <div
                 key={skill.id}
-                className="w-[300px] md:w-[300px] 3xl:w-[400px] h-[450px] flex flex-col justify-start pt-20 items-center relative"
+                className="w-[300px] md:w-[300px] 3xl:w-[400px] h-[450px] flex flex-col justify-start pt-20 items-center relative rounded-3xl border-2 border-black"
               >
                 <div className="pt-4 text-3xl font-subtext-heebo font-semibold">
                   {skill.heading}
@@ -68,7 +43,7 @@ const Skills = () => {
                     return <p>{currSkill}</p>;
                   })}
                 </div>
-                <Image
+                {/* <Image
                   //   data-speed={`${
                   //     skill.id === 1 || skill.id === skills.length
                   //       ? "0.5"
@@ -79,7 +54,7 @@ const Skills = () => {
                   height={450}
                   width={300}
                   className={`absolute top-0 card-${skill.id}`}
-                />
+                /> */}
               </div>
             );
           })}
@@ -90,68 +65,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-// // ParallaxBox.tsx
-// import React, { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// // Register the ScrollTrigger plugin
-// gsap.registerPlugin(ScrollTrigger);
-
-// const ParallaxBox = () => {
-//   useEffect(() => {
-//     // Create a timeline for GSAP animations
-//     const ctx = gsap.context(() => {
-//       // Apply parallax effect to any element with a data-speed attribute
-//       gsap.to("[data-speed]", {
-//         y: (i, el) =>
-//           (1 - parseFloat(el.getAttribute("data-speed"))) * window.innerHeight,
-//         ease: "none",
-//         scrollTrigger: {
-//           trigger: ".box-container",
-//           start: "top bottom", // Start when the top of the box container hits the bottom of the viewport
-//           end: "bottom top", // End when the bottom of the box container hits the top of the viewport
-//           scrub: true, // Smooth scrubbing
-//           markers: true, // Enable markers for debugging (remove in production)
-//         },
-//       });
-//     });
-
-//     // Cleanup function to kill the animation and triggers
-//     return () => {
-//       ctx.revert(); // Revert all GSAP changes on unmount
-//       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-//     };
-//   }, []);
-
-//   return (
-//     <div className="flex flex-col items-center justify-center relative h-[300vh]">
-//       <p className="mb-4">
-//         Add a <code className="p-1 bg-gray-200">data-speed</code> attribute to
-//         any element. 1 = normal scroll speed, 0 = no movement, 0.5 = half-speed,
-//         etc.
-//       </p>
-
-//       <div className="box-container flex justify-center relative top-[50vh] w-full overflow-visible">
-//         <div className="box bg-green-500" data-speed="0.25">
-//           0.25
-//         </div>
-//         <div className="box bg-purple-500" data-speed="0.4">
-//           0.4
-//         </div>
-//         <div className="box bg-orange-500" data-speed="0">
-//           0
-//         </div>
-//         <div className="box bg-red-500" data-speed="1">
-//           1
-//         </div>
-//         <div className="box bg-blue-500" data-speed="0.75">
-//           0.75
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ParallaxBox;

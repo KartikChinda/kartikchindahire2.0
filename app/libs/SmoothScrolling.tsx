@@ -7,9 +7,10 @@ const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
     <ReactLenis
       root
       options={{
-        lerp: 0.03,
-        duration: 5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.1,
+        duration: 1.2,
+        easing: (t) =>
+          t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
         smoothWheel: true,
       }}
     >

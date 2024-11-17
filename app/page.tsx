@@ -32,7 +32,8 @@ export default function Home() {
         <Gallery />
       </div>
       <Projects />
-      <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} />
+      <Skills />
+      {/* <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} /> */}
       <Testimonials />
       <Gradient colorArray={["#FFF8F0", "#fff"]} />
       <Contact />

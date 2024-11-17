@@ -60,7 +60,7 @@ export default function WorkExNew() {
       ></div>
       {experiences.map((exp, index) => (
         <div
-          className="h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center mb-8 md:mb-0 rounded-xl"
+          className="lg:h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center  md:mb-0 rounded-xl"
           ref={(el) => {
             observerRef.current[index] = el;
           }}
