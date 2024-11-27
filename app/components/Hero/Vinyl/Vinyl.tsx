@@ -43,7 +43,7 @@ const Vinyl = () => {
             startOffset: "100%",
           },
           ease: "linear",
-          duration: 8,
+          duration: 15,
           repeat: -1,
           delay: delay,
         });
@@ -51,8 +51,8 @@ const Vinyl = () => {
 
       // this is from the id's we gave the texts
       animateText("#Text0", 0);
-      animateText("#Text1", 2.5);
-      animateText("#Text2", 5);
+      animateText("#Text1", 3);
+      animateText("#Text2", 6);
 
       gsap.to("#disk", {
         rotate: 360,

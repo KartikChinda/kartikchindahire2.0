@@ -14,10 +14,19 @@ import WorkExNew from "./components/WorkEx/WorkExNew";
 
 export default function Home() {
   const [loading, setloading] = useState(true);
+
+  // useEffect(() => {
+  //   document.documentElement.style.overflow = "hidden";
+  //   document.body.style.overflow = "hidden";
+  // }, []);
+
   useEffect(() => {
-    document.body.classList.add("overflow-hidden");
-    if (loading === false) {
-      document.body.classList.remove("overflow-hidden");
+    if (loading) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
     }
   }, [loading]);
 
@@ -33,7 +42,6 @@ export default function Home() {
       </div>
       <Projects />
       <Skills />
-      {/* <Gradient colorArray={["#FCFAF6", "#FFF8F0"]} /> */}
       <Testimonials />
       <Gradient colorArray={["#FFF8F0", "#fff"]} />
       <Contact />
