@@ -17,9 +17,9 @@ const ExperienceCard = ({
   experience: experienceCardProps;
 }) => {
   return (
-    <div className="h-full w-full rounded-2xl flex justify-center items-center text-white font-subtext-heebo p-8 ">
-      <div className="flex flex-col lg:flex-row justify-start items-center lg:justify-between ">
-        <div className=" rounded-xl w-[80%] 2xl:w-[40%] flex justify-center items-center">
+    <div className="h-full w-full rounded-2xl flex justify-center items-center text-white font-subtext-heebo p-8">
+      <div className="flex flex-col lg:flex-row justify-start items-center lg:justify-between w-full ">
+        <div className="rounded-xl w-[80%] 2xl:w-[40%] flex justify-center items-center">
           <Image
             src={experience.icon}
             alt={experience.company_name}
@@ -28,7 +28,7 @@ const ExperienceCard = ({
         </div>
 
         {/* Experience text and points */}
-        <div className=" mt-4 font-subtext-heebo lg:text-lg lg:w-[50%] 2xl:w-[60%] lg:scale-110">
+        <div className=" mt-4 font-subtext-heebo lg:text-lg lg:w-[60%] 2xl:scale-110 2xl:px-[30px]">
           <p className="font-bold text-xl">{experience.title}</p>
 
           <p className="text-sm font-semibold mb-4 font-subtext-lora">

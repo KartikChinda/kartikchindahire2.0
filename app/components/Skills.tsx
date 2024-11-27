@@ -1,8 +1,6 @@
 import Gradient from "@/app/components/Gradients/index";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { skills } from "../constants";
-import Image from "next/image";
-import Card from "@/public/card.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -33,7 +31,7 @@ const Skills = () => {
             return (
               <div
                 key={skill.id}
-                className="w-[300px] md:w-[300px] 3xl:w-[400px] h-[450px] flex flex-col justify-start pt-20 items-center relative rounded-3xl border-2 border-black"
+                className="w-[300px] md:w-[300px] 3xl:w-[400px] h-[450px] flex flex-col justify-start pt-20 items-center relative rounded-3xl border-2 border-black hover:scale-[1.1] duration-300 hover:shadow-2xl"
               >
                 <div className="pt-4 text-3xl font-subtext-heebo font-semibold">
                   {skill.heading}

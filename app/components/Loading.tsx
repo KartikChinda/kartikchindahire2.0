@@ -8,19 +8,18 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
   const [colorIndex, setColorIndex] = useState(0);
   const overlayRef = useRef<HTMLDivElement>(null);
   const colors = [
-    "#FFFFFF", // White
-    "#D4FFB3", // Light lime green
-    "#A3E9A3", // Pastel lime green
-    "#A3D9FF", // Light blue
-    "#B3A7FF", // Light lavender blue
-    "#FFB3D9", // Light pink
-    "#FFB3BA", // Soft pink
+    "#D2FF72",
+    "#00FF9C",
+    "#FFFF80",
+    "#F72798",
+    "#31E1F7",
+    "#FF0000",
   ];
 
   useEffect(() => {
     const colorInterval = setInterval(() => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    }, 250);
+    }, 200);
     return () => clearInterval(colorInterval);
   }, [colors.length]);
 

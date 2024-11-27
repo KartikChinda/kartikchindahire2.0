@@ -52,7 +52,7 @@ export default function WorkExNew() {
   return (
     <div className="pt-20 pb-[25vh] w-full relative bg-black flex flex-col justify-center items-center">
       <div
-        className="flex flex-col justify-center items-center w-[85%] h-[80vh]  sticky top-20  p-2 bg-black text-white overflow-auto rounded-xl"
+        className="flex flex-col justify-center items-center w-[85%] h-[80vh]  sticky top-[10%]  p-2 bg-black text-white overflow-auto rounded-xl"
         style={{
           boxShadow: `-50px 0 70px ${shadowColor}, 50px 0 70px ${shadowColor}`,
           transition: "box-shadow 0.5s ease-in-out",
@@ -61,7 +61,7 @@ export default function WorkExNew() {
       {experiences.map((exp, index) => (
         <div
           id={`${index}`}
-          className="lg:h-[80vh] w-[85%] z-10 bg-black flex justify-center items-center  md:mb-0 rounded-xl"
+          className="lg:h-[80vh] 2xl:h-[60vh] w-[85%] z-10 bg-black flex justify-center items-center  md:mb-0 rounded-xl"
           ref={(el) => {
             observerRef.current[index] = el;
           }}

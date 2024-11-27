@@ -1,5 +1,7 @@
+// @ts-nocheck
+"use client";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import WebGLFluidEnhanced from "webgl-fluid-enhanced";
 import Socials from "./Socials";
 
@@ -8,6 +10,7 @@ const Contact = () => {
 
   useEffect(() => {
     if (containerRef.current) {
+      console.log("We're here");
       const simulation = new WebGLFluidEnhanced(containerRef.current);
       simulation.setConfig({
         densityDissipation: 0.5,

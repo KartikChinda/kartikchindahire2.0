@@ -13,6 +13,7 @@ const Socials = () => {
     <div className="w-full h-full rounded-xl flex gap-4  text-gray-300 justify-center items-center text-4xl group duration-150">
       <Link
         href={"https://github.com/KartikChinda/"}
+        target="__blank"
         className="hover:text-white duration-150"
       >
         {" "}

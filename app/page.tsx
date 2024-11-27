@@ -15,11 +15,6 @@ import WorkExNew from "./components/WorkEx/WorkExNew";
 export default function Home() {
   const [loading, setloading] = useState(true);
 
-  // useEffect(() => {
-  //   document.documentElement.style.overflow = "hidden";
-  //   document.body.style.overflow = "hidden";
-  // }, []);
-
   useEffect(() => {
     if (loading) {
       document.documentElement.style.overflow = "hidden";
