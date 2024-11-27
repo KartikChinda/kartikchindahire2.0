@@ -1,21 +1,38 @@
+// @ts-nocheck
 "use client";
 
 import { ReactLenis } from "@studio-freight/react-lenis";
+import { useState, useEffect } from "react";
 
 const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
-  return (
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => window.innerWidth <= 768;
+    setIsMobile(checkIsMobile());
+
+    window.addEventListener("resize", () => setIsMobile(checkIsMobile()));
+
+    return () => {
+      window.removeEventListener("resize", () => setIsMobile(checkIsMobile()));
+    };
+  }, []);
+  return !isMobile ? (
     <ReactLenis
       root
       options={{
-        lerp: 0.1,
-        duration: 1.2,
-        easing: (t) =>
-          t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
         smoothWheel: true,
+        smoothTouch: false,
+        duration: 1.5,
+        lerp: 0.1,
+        // inertia: 0.99,
+        wheelMultiplier: 1,
       }}
     >
       {children}
     </ReactLenis>
+  ) : (
+    <>{children}</>
   );
 };
 

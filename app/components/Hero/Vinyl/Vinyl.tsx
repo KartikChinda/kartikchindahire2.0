@@ -43,7 +43,7 @@ const Vinyl = () => {
             startOffset: "100%",
           },
           ease: "linear",
-          duration: 15,
+          duration: 13,
           repeat: -1,
           delay: delay,
         });
