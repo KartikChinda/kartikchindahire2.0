@@ -8,12 +8,13 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
   const [colorIndex, setColorIndex] = useState(0);
   const overlayRef = useRef<HTMLDivElement>(null);
   const colors = [
-    "#D2FF72",
-    "#00FF9C",
-    "#FFFF80",
-    "#F72798",
-    "#31E1F7",
-    "#FF0000",
+    // "#D2FF72",
+    // "#00FF9C",
+    // "#FFFF80",
+    // "#F72798",
+    // "#31E1F7",
+    // "#FF0000",
+    "#fff",
   ];
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const Loading = ({ setloading }: { setloading: (val: boolean) => void }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black flex items-center justify-center z-50 text-white text-[100px] xl:text-[250px] font-black italic font-hero-heading"
+      className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50 text-white text-xl font-black italic font-hero-heading gap-8"
       ref={overlayRef}
       style={{ clipPath: "circle(100%)" }}
     >
