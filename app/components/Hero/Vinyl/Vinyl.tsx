@@ -143,7 +143,7 @@ const Vinyl = () => {
         id="text-secondary"
         fill="#F4F9FF"
         className="absolute 
-        top-[15%] md:top-[35%] lg:top-[10%]
+        top-[15%] md:top-[35%] lg:-top-[5%] xl:top-[10%]
         3xl:top-[25%]
          ipad-pro-portrait:top-[30%]
         overflow-visible"
@@ -180,7 +180,7 @@ const Vinyl = () => {
 
       <div
         id="disk"
-        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[400px] md:h-[400px] xl:w-[550px] xl:h-[550px] rounded-full flex justify-center items-center"
+        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] rounded-full flex justify-center items-center"
       >
         <Image src={vinyl} alt="vinyl" className=" vinyl-images" />
 
