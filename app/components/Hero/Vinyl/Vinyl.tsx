@@ -180,7 +180,7 @@ const Vinyl = () => {
 
       <div
         id="disk"
-        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[550px] md:h-[550px] rounded-full flex justify-center items-center"
+        className="absolute top-1/2 left-1/2  translate-x-[-50%] translate-y-[-50%] w-[350px] h-[350px] md:w-[400px] md:h-[400px] xl:w-[550px] xl:h-[550px] rounded-full flex justify-center items-center"
       >
         <Image src={vinyl} alt="vinyl" className=" vinyl-images" />
 

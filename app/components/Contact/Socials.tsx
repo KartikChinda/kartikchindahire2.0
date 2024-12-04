@@ -21,6 +21,7 @@ const Socials = () => {
       </Link>
       <Link
         href={"https://twitter.com/ChindaKartik"}
+        
         className="hover:text-white duration-150"
       >
         {" "}
