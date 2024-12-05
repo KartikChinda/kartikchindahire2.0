@@ -23,7 +23,7 @@ const SmoothScrolling = ({ children }: { children: React.ReactNode }) => {
       options={{
         smoothWheel: true,
         smoothTouch: false,
-        duration: 2.5,
+        duration: 1.4,
         // lerp: 0.1,
         easing: (t) => 1 - Math.pow(1 - t, 3),
         // inertia: 0.99,
