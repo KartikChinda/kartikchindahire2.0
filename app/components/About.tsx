@@ -63,9 +63,18 @@ const AboutMe = () => {
               product engineer.
             </span>
             <br />
-            From DRDO to DS Bayern, Munich and UWaterloo, Canada, I've tackled
-            projects across continents, won hackathons, boosted open-source, and
-            published three research papers (a fourth is in the works!).
+            From DRDO to DigitalSchmeide Bayern, UWaterloo, and Web3 startups,
+            I’ve had the chance to work on projects across continents,
+            collaborating with teams around the world, winning hackathons,
+            contributing to open-source, and publishing three research papers (a
+            fourth is in progress!). Along the way, I’ve built high-performance,
+            scalable web applications, designed end-to-end product features, and
+            delivered production-ready solutions that drive user engagement,
+            adoption, and measurable impact. At Birdeye, I take full ownership
+            of frontend and full-stack features, turning complex APIs, AI
+            systems, and dashboards into intuitive, revenue-critical products. I
+            love building cool stuff end-to-end, learning from new challenges,
+            and transforming ideas into impactful, user-focused experiences.
             <span className="font-bold text-white hover:drop-shadow-lg"></span>
             <br /> <br />
             When I am not creating the most visually stunning websites with
