@@ -2,7 +2,7 @@ const skills = [
     {
         id: 1,
         heading: "Languages",
-        skills: ["C", "C++", "JavaScript", "TypeScript", "HTML"]
+        skills: ["C", "C++", "JavaScript", "TypeScript", "HTML", "Rust"]
     },
     {
         id: 2,
